@@ -1,0 +1,88 @@
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	Removed taintmode from Valgrind test; the module is not taint safe
+
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	- Added an author test using Test::Valgrind
+
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	- Moved memory to a test under 02, because it should only be run if 01compile passes
+
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	- Added README and MANIFEST
+	- Added svn:keywords to everything
+
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	- Added a bunch of tests
+	- Added a META.yml
+	- Changed version number to 1.0 to prepare for release
+	- Removed the test.pl file
+	TODO: decide if the Pod Coverage test is really necessary
+
+2009-04-06  Jonathan Yu <frequency@cpan.org>
+
+	- Changed type to simply unsigned long
+	- Modified XS interface to specify irand instead of randInt, thus matching the Pure Perl interface
+	- Cleaned up code by using 'ub4' again (this time defined as a long)
+	- Defined cut() macro to deal with chopping off everything above 32 bits
+
+2009-03-19  Jonathan Yu <frequency@cpan.org>
+
+	- Added a LICENSE file explaining the terms
+	- Moved C/XS source files into the src/ directory
+
+2009-03-17  Jonathan Yu <frequency@cpan.org>
+
+	- Moved Math::Random::ISAAC files into its own package, getting ready for future release as an XS module with a PurePerl counterpart
+
+2009-03-15  Jonathan Yu <frequency@cpan.org>
+
+	- Added a test to check that the generated sequence is correct
+	- Added a randInt method, which gets the next number in the sequence as an integer.
+	- Added a rand method, which divides the number by UINT32_MAX (so as to return a number between (0,1]
+
+2009-03-15  Jonathan Yu <frequency@cpan.org>
+
+	Fixed headers in rand.h and standard.h - the inclusion of stdio and stddef is unnecessary now (since there is no output from the C side)
+
+2009-03-15  Jonathan Yu <frequency@cpan.org>
+
+	Updated types for ISAAC.xs
+
+2009-03-15  Jonathan Yu <frequency@cpan.org>
+
+	Updated ISAAC to use stdint.h for standard integer sizes/types
+
+2009-03-15  Jonathan Yu <frequency@cpan.org>
+
+	- Removed the ISAAC64 stuff; this belongs in a different module
+
+2009-03-12  Jonathan Yu <frequency@cpan.org>
+
+	Uploaded the typemap file
+
+2009-03-12  Jonathan Yu <frequency@cpan.org>
+
+	Added support for 64bit perls (not tested yet)
+
+2009-03-08  Jonathan Yu <frequency@cpan.org>
+
+	Commit a basic bootloader module.
+
+	TODO: figure out how to make an XS module fall back on Perl if necessary
+
+2009-03-08  Jonathan Yu <frequency@cpan.org>
+
+	Initial commit of some very rough prototype XS code :-)
+
+2009-03-08  Jonathan Yu <frequency@cpan.org>
+
+	Added a folder for Math::Random::ISAAC, a random number generator implementing the ISAAC algorithm
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
