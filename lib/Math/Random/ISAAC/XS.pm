@@ -1,7 +1,7 @@
 # Math::Random::ISAAC::XS
 #  Interface to the ISAAC Pseudo-Random Number Generator
 #
-# $Id: XS.pm 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $
+# $Id: XS.pm 6046 2009-04-07 07:08:50Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -20,11 +20,11 @@ Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
 
 =head1 VERSION
 
-Version 1.0 ($Id: XS.pm 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $)
+Version 1.0.1 ($Id: XS.pm 6046 2009-04-07 07:08:50Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0');
+use version; our $VERSION = qv('1.0.1');
 
 =head1 SYNOPSIS
 
@@ -82,7 +82,7 @@ Implements the interface as specified in C<Math::Random::ISAAC>
 # the interface for the user. XSLoader is believed to be more
 # memory efficient than DynaLoader.
 use XSLoader;
-XSLoader::load(__PACKAGE__, $VERSION->numify);
+XSLoader::load(__PACKAGE__, $VERSION);
 
 =head1 AUTHOR
 

@@ -1,3 +1,8 @@
+2009-04-07  Jonathan Yu <frequency@cpan.org>
+
+	- Changed the bootstrap loading to use VERSION instead of VERSION->numify, so that they match (prevents compile errors with "object version v1.0 does not match bootstrap parameter 1.000000" (apparently causes failures in 50% of machines so far)
+	- Bumped version to 1.0.1
+
 2009-04-06  Jonathan Yu <frequency@cpan.org>
 
 	Removed taintmode from Valgrind test; the module is not taint safe
