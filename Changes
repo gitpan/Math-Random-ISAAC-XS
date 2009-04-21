@@ -1,3 +1,10 @@
+2009-04-20  Jonathan Yu <frequency@cpan.org>
+
+	- Add Build.PL detection of int size
+	- Version bumped to 1.0.2
+	- A flag now controls whether 'int' or 'long' is used as the type: USE_INT. If Build.PL detects that int is 32bits wide, then it will use that type. Otherwise it'll use long, which is more portable.
+	- A flag will control if the portability code is used. Right now this involves masking all numbers with "& 0xffffffff" to cut off the high bits - this code isn't necessary for 32-bit variable widths, so we might squeeze a bit more performance out this way
+
 2009-04-07  Jonathan Yu <frequency@cpan.org>
 
 	- Changed the bootstrap loading to use VERSION instead of VERSION->numify, so that they match (prevents compile errors with "object version v1.0 does not match bootstrap parameter 1.000000" (apparently causes failures in 50% of machines so far)

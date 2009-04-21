@@ -17,13 +17,18 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  *
- * $Id: rand.c 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $
+ * $Id: rand.c 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $
  */
 
 #include "standard.h"
 #include "rand.h"
 
+#ifdef USE_PORTABLE
 #define cut(a)     ((a) & 0xffffffff) /* Cut the integer down to 32bits */
+#else
+#define cut(a)     (a) /* A no-op */
+#endif
+
 #define ind(mm,x)  ((mm)[(x>>2)&(RANDSIZ-1)])
 /* the call to cut() is a macro defined in standard.h */
 #define rngstep(mix,a,b,mm,m,m2,r,x) \

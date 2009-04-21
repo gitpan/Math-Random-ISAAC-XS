@@ -6,14 +6,18 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  *
- * $Id: standard.h 6031 2009-04-06 21:52:00Z FREQUENCY@cpan.org $
+ * $Id: standard.h 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $
  */
 
 #ifndef STANDARD
 #define STANDARD 1
 
-/* Use unsigned long as our type */
+/* Determine what type to use based on Perl's detection */
+#ifdef USE_INT
+typedef  unsigned int  ub4;
+#else
 typedef  unsigned long  ub4;
+#endif
 
 /* Some miscellaneous bit operation macros */
 #define bis(target,mask)  ((target) |=  (mask))
