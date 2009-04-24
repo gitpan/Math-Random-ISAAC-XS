@@ -1,7 +1,7 @@
 # Math::Random::ISAAC::XS
 #  Interface to the ISAAC Pseudo-Random Number Generator
 #
-# $Id: XS.pm 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $
+# $Id: XS.pm 6601 2009-04-24 01:15:50Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -20,11 +20,11 @@ Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
 
 =head1 VERSION
 
-Version 1.0.2 ($Id: XS.pm 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $)
+Version 1.0.3 ($Id: XS.pm 6601 2009-04-24 01:15:50Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0.2');
+use version; our $VERSION = qv('1.0.3');
 
 =head1 SYNOPSIS
 
