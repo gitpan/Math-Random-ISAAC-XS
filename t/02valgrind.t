@@ -5,7 +5,7 @@
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# $Id: 02valgrind.t 6044 2009-04-07 02:33:01Z FREQUENCY@cpan.org $
+# $Id: 02valgrind.t 6939 2009-05-06 16:29:24Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -16,18 +16,16 @@ use warnings;
 
 use Test::More;
 
-unless ($ENV{TEST_AUTHOR}) {
-  plan skip_all => 'Set TEST_AUTHOR to enable module author tests';
+unless ($ENV{TEST_VALGRIND}) {
+  plan skip_all => 'Set TEST_VALGRIND to enable memory leak tests';
 }
 
 eval {
-  require Test::Valgrind;
+  require Test::Valgrind; # 5 tests
 };
 if ($@) {
   plan skip_all => 'Test::Valgrind required to test memory leaks';
 }
-
-plan tests => 2;
 
 use Math::Random::ISAAC::XS ();
 

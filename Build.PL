@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $
+# $Id: Build.PL 6717 2009-04-27 18:37:55Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -53,7 +53,7 @@ my $builder = Module::Build->new(
   license               => 'unrestricted',
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Math/Random/ISAAC/XS.pm',
-  dynamic_config        => 0,
+  dynamic_config        => 1,
   create_readme         => 1,
   recursive_test_files  => 1,
   sign                  => 1,
@@ -121,7 +121,7 @@ my $builder = Module::Build->new(
 
       # Official keys (homepage, license, bugtracker)
       repository   => 'http://svn.ali.as/cpan/trunk/Math-Random-ISAAC-XS',
-      bugtracker   => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC',
+      bugtracker   => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS',
       license      => 'http://edwardsamuels.com/copyright/beyond/articles/public.html',
     },
   },

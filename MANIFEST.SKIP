@@ -10,6 +10,7 @@
 
 # Module::Build generated files and dirs.
 ^Build$
+^Build\.bat$
 ^_build/
 
 # Source object files
@@ -34,6 +35,7 @@
 \#$
 \b\.#
 \.bak$
+\.tmp$
 
 # Devel::Cover files.
 \bcover_db\b

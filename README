@@ -1,7 +1,7 @@
 NAME
     Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
 
-$Id: README 6040 2009-04-07 00:25:30Z FREQUENCY@cpan.org $
+$Id: README 6749 2009-04-29 23:56:09Z FREQUENCY@cpan.org $
 
 DESCRIPTION
     As with other Pseudo-Random Number Generator (PRNG) algorithms like the
@@ -20,28 +20,6 @@ DESCRIPTION
     unless you know the seed. The algorithm was published by Bob Jenkins in
     the late 90s and despite the best efforts of many security researchers,
     no feasible attacks have been found to date.
-
-SYNOPSIS
-      use Math::Random::ISAAC::XS;
-
-      my $rng = Math::Random::ISAAC::XS->new(@seeds);
-
-      for (0..30) {
-        print 'Result: ' . $rng->irand() . "\n";
-      }
-
-PURPOSE
-    This module implements the same interface as C<Math::Random::ISAAC> and
-    can be used as a drop-in replacement. This is the recommended
-    implementation of the module, based on Bob Jenkins' reference
-    implementation in C.
-
-    Selecting the backend to use manually really only has two uses:
-    *   If you are trying to avoid the small overhead incurred with
-        dispatching method calls to the appropriate backend modules.
-
-    *   If you are testing the module for performance and wish to explicitly
-        decide which module you would like to use.
 
 COMPATIBILITY
     This module was tested under Perl 5.10.0, using Debian Linux. Because it
@@ -81,7 +59,7 @@ SUPPORT
 
     *   CPAN Request Tracker
 
-        <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC>
+        <http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS>
 
     *   CPAN Testing Service (Kwalitee Tests)
 
