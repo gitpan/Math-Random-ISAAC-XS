@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 6717 2009-04-27 18:37:55Z FREQUENCY@cpan.org $
+# $Id: Build.PL 7048 2009-05-12 18:18:13Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -75,7 +75,7 @@ my $builder = Module::Build->new(
 
     # Pragmatic and special modules
     'Carp'                  => 1.04,
-    'version'               => 0.76,
+    'version'               => 0,
     'warnings'              => 0,
     'strict'                => 0,
 
@@ -88,6 +88,7 @@ my $builder = Module::Build->new(
 
     # For the XS build process
     'ExtUtils::CBuilder'    => 0,
+    'ExtUtils::ParseXS'     => 0,
   },
   recommends => {
     # The main interface

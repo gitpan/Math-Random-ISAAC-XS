@@ -10,6 +10,7 @@ MANIFEST.SKIP
 META.yml
 README
 SIGNATURE
+src/ppport.h
 src/rand.h
 src/rand.c
 src/standard.h

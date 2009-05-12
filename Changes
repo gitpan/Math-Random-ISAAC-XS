@@ -1,3 +1,32 @@
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	Forgot ppport.h is under src/
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	- Add the Perl portability header ppport.h to MANIFEST
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	New simplified license - Public Domain (fallback on MIT, Artistic-2+, GPL-2+ only)
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	- Removed requirement for minimum 'version' version
+	- Added ppport.h for portability to older Perls (this hasn't been a problem so far, but `perl ppport.h' suggested it due to SvUV)
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	- Bumped version to 1.0.5
+	- Added ExtUtils::ParseXS as a dependency; modules were failing to build on systems that don't have it installed, because the typemap isn't properly included by xsubpp/Module::Build (See: http://osdir.com/ml/lang.perl.modules.module-build/2005/msg00501.html)
+
+2009-05-07  Jonathan Yu <frequency@cpan.org>
+
+	Made some changes mostly related to splint warnings:
+	- Declared isaac() as static because it isn't used outside rand.c
+	- Minor reformatting
+	- Changed line to: if (ctx->randcnt-- == 0) { to make intent more obvious
+
 2009-05-06  Jonathan Yu <frequency@cpan.org>
 
 	Changed the valgrind test from an author test to its own special test - one must set TEST_VALGRIND=1 to test the module through valgrind. This must be done until we have better suppression support upstream in Test::Valgrind.

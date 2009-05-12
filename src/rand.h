@@ -4,7 +4,7 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  * 
- * $Id: rand.h 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $
+ * $Id: rand.h 6953 2009-05-08 01:39:23Z FREQUENCY@cpan.org $
  */
 
 #ifndef RAND
@@ -28,7 +28,7 @@ typedef  struct randctx  randctx;
 
 /* Initialize using randrsl[0..RANDSIZ-1] as the seed */
 void randinit(randctx *);
-void isaac(randctx *);
+static void isaac(randctx *);
 ub4 randInt(randctx *);
 
 /* Call rand(randctx *r) to get a single 32-bit random value

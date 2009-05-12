@@ -4,12 +4,13 @@
  * written by Bob Jenkins and released into the public domain circa 1996.
  * See `LICENSE' for details.
  *
- * $Id: ISAAC.xs 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $
+ * $Id: ISAAC.xs 7048 2009-05-12 18:18:13Z FREQUENCY@cpan.org $
  */
 
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
+#include "ppport.h"
 
 #include "rand.h"
 #include "standard.h"
