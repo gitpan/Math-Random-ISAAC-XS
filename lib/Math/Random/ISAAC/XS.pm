@@ -1,13 +1,7 @@
 # Math::Random::ISAAC::XS
 #  Interface to the ISAAC Pseudo-Random Number Generator
 #
-# $Id: XS.pm 7045 2009-05-12 13:25:56Z FREQUENCY@cpan.org $
-#
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: XS.pm 8223 2009-07-26 00:10:14Z FREQUENCY@cpan.org $
 
 package Math::Random::ISAAC::XS;
 
@@ -20,17 +14,17 @@ Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
 
 =head1 VERSION
 
-Version 1.0.5 ($Id: XS.pm 7045 2009-05-12 13:25:56Z FREQUENCY@cpan.org $)
+Version 1.0.6 ($Id: XS.pm 8223 2009-07-26 00:10:14Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0.5');
+use version; our $VERSION = qv('1.0.6');
 
 =head1 SYNOPSIS
 
-This module implements the same interface as C<Math::Random::ISAAC> and can be
-used as a drop-in replacement. This is the recommended implementation of the
-module, based on Bob Jenkins' reference implementation in C.
+This module implements the same interface as C<Math::Random::ISAAC> and can
+be used as a drop-in replacement. This is the recommended implementation of
+the module, based on Bob Jenkins' reference implementation in C.
 
 Selecting the backend to use manually really only has two uses:
 
@@ -38,8 +32,8 @@ Selecting the backend to use manually really only has two uses:
 
 =item *
 
-If you are trying to avoid the small overhead incurred with dispatching method
-calls to the appropriate backend modules.
+If you are trying to avoid the small overhead incurred with dispatching
+method calls to the appropriate backend modules.
 
 =item *
 
@@ -130,20 +124,20 @@ You can access the most recent development version of this module at:
 
 L<http://svn.ali.as/cpan/trunk/Math-Random-ISAAC-XS>
 
-If you are a CPAN developer and would like to make modifications to the code
-base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the repository
-administrator. I only ask that you contact me first to discuss the changes you
-wish to make to the distribution.
+If you are a CPAN developer and would like to make modifications to the
+code base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the
+repository administrator. I only ask that you contact me first to discuss
+the changes you wish to make to the distribution.
 
 =head1 FEEDBACK
 
-Please send relevant comments, rotten tomatoes and suggestions directly to the
-maintainer noted above.
+Please send relevant comments, rotten tomatoes and suggestions directly to
+the maintainer noted above.
 
 If you have a bug report or feature request, please file them on the CPAN
-Request Tracker at L<http://rt.cpan.org>. If you are able to submit your bug
-report in the form of failing unit tests, you are B<strongly> encouraged to do
-so.
+Request Tracker at L<http://rt.cpan.org>. If you are able to submit your
+bug report in the form of failing unit tests, you are B<strongly> encouraged
+to do so.
 
 =head1 SEE ALSO
 
@@ -151,18 +145,9 @@ L<Math::Random::ISAAC>
 
 =head1 LICENSE
 
-Copyleft 2009 by Jonathan Yu <frequency@cpan.org>. All rights reversed.
-
-I, the copyright holder of this package, hereby release the entire contents
-therein into the public domain. This applies worldwide, to the extent that
-it is permissible by law.
-
-In case this is not legally possible, I grant any entity the right to use
-this work for any purpose, without any conditions, unless such conditions
-are required by law.
-
-The full details of this can be found in the B<LICENSE> file included in
-this package.
+In a perfect world, I could just say that this package and all of the code
+it contains is Public Domain. It's a bit more complicated than that; you'll
+have to read the included F<LICENSE> file to get the full details.
 
 =head1 DISCLAIMER OF WARRANTY
 

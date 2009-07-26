@@ -3,31 +3,34 @@
 # t/03uniform.t
 #  Checks that the generated sequence is a uniform distribution
 #
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# $Id: 03uniform.t 6040 2009-04-07 00:25:30Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: 03uniform.t 8221 2009-07-25 23:25:30Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
 use Test::More;
 
+unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
+  plan skip_all => 'Author tests not required for installation';
+}
+
 # Test the XS version only; the Pure Perl version has its own tests
 use Math::Random::ISAAC::XS ();
 
-unless ($ENV{TEST_AUTHOR}) {
-  plan skip_all => 'Set TEST_AUTHOR to enable module author tests';
-}
+my %MODULES = (
+  'Statistics::Test::RandomWalk'  => 0,
+);
 
-eval {
-  require Statistics::Test::RandomWalk;
-};
-if ($@) {
-  plan skip_all => 'Statistics::Test::RandomWalk required to test uniformity';
+while (my ($module, $version) = each %MODULES) {
+  eval "use $module $version";
+  next unless $@;
+
+  if ($ENV{RELEASE_TESTING}) {
+    die 'Could not load release-testing module ' . $module;
+  }
+  else {
+    plan skip_all => $module . ' not available for testing';
+  }
 }
 
 my $no_bins = 20;

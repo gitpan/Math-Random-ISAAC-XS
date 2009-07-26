@@ -1,3 +1,60 @@
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	Enable svn:keywords
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	Rewrote POD a bit
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	The last variables using TEST_AUTHOR now use RELEASE_TESTING|AUTOMATED_TESTING
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	- Various POD updates
+	- Overhaul test scripts, remove author tests from Recommends (Alias' journal #5375)
+
+2009-07-22  Jonathan Yu <frequency@cpan.org>
+
+	- Provide a less more generic README so I don't need to bother updating it.
+	- Minor cleanups in the LICENSE
+
+2009-07-22  Jonathan Yu <frequency@cpan.org>
+
+	- Removed CAVEATS from README
+	- Updated copyright statements
+
+2009-07-22  Jonathan Yu <frequency@cpan.org>
+
+	- Bumped version to 1.0.6
+	- Require Internet (TEST_INTERNET) to do the signature test, since it tries to download the key from a keyserver
+
+2009-07-22  Jonathan Yu <frequency@cpan.org>
+
+	Slight reformatting, nothing significant.
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	No longer enforce "one dot only" in filenames. This breaks compatibility with OpenVMS.
+
+2009-06-09  Jonathan Yu <frequency@cpan.org>
+
+	Minor formatting changes
+
+2009-06-05  Jonathan Yu <frequency@cpan.org>
+
+	- Instead of joining the array, just pass an array ref (otherwise it is split into an array anyway) [Build.PL]
+	- Clarified license for the case where public domain is not permitted (ie, Germany)
+
+2009-05-14  Jonathan Yu <frequency@cpan.org>
+
+	Applied patch from RT#46071 (http://rt.cpan.org/Ticket/Display.html?id=46071). Thanks Taro Nishino
+
+2009-05-13  Jonathan Yu <frequency@cpan.org>
+
+	Updated LICENSE (removed some old text)
+
 2009-05-12  Jonathan Yu <frequency@cpan.org>
 
 	Forgot ppport.h is under src/

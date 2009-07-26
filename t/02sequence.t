@@ -3,13 +3,7 @@
 # t/02sequence.t
 #  Checks that the generated sequence matches the reference
 #
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# $Id: 02sequence.t 6039 2009-04-07 00:09:09Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: 02sequence.t 8220 2009-07-25 23:18:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

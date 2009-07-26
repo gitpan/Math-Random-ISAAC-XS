@@ -1,15 +1,9 @@
 #!/usr/bin/perl
 
 # t/02valgrind.t
-#  Tests that there are no memory leaks
+#  Tests that there are no memory leaks using valgrind
 #
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# $Id: 02valgrind.t 6939 2009-05-06 16:29:24Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: 02valgrind.t 8220 2009-07-25 23:18:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

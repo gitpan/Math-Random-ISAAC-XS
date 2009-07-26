@@ -3,13 +3,13 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 7048 2009-05-12 18:18:13Z FREQUENCY@cpan.org $
+# $Id: Build.PL 8220 2009-07-25 23:18:15Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# This package and its contents are released by the author into the Public
+# Domain, to the full extent permissible by law. For additional information,
+# please see the included `LICENSE' file.
 
 use strict;
 use warnings;
@@ -54,7 +54,7 @@ my $builder = Module::Build->new(
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Math/Random/ISAAC/XS.pm',
   dynamic_config        => 1,
-  create_readme         => 1,
+  create_readme         => 0,
   recursive_test_files  => 1,
   sign                  => 1,
   create_packlist       => 1,
@@ -68,7 +68,7 @@ my $builder = Module::Build->new(
     'src/ISAAC.xs' => 'lib/Math/Random/ISAAC/XS.xs',
   },
 
-  extra_compiler_flags => join(' ', @flags),
+  extra_compiler_flags => \@flags,
 
   requires => {
     'perl'                  => 5.006,
@@ -93,21 +93,6 @@ my $builder = Module::Build->new(
   recommends => {
     # The main interface
     'Math::Random::ISAAC'           => 0,
-
-    # Author tests
-    'Test::Perl::Critic'            => 1.01,
-    'Perl::Critic'                  => 1.096,
-    'Test::YAML::Meta'              => 0.11,
-    'Test::Kwalitee'                => 1.01,
-    'Test::Signature'               => 1.10,
-    'Test::Pod'                     => 1.14,
-    'Test::Pod::Coverage'           => 1.04,
-    'Test::Portability::Files'      => 0.05,
-    'Test::MinimumVersion'          => 0.008,
-    'Test::LeakTrace'               => 0.07,
-    'Statistics::Test::RandomWalk'  => 0,
-    'Test::Without::Module'         => 0.17,
-    'Test::DistManifest'            => 1.001002,
   },
   conflicts => {
   },

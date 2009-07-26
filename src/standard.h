@@ -6,7 +6,7 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  *
- * $Id: standard.h 6506 2009-04-21 02:43:47Z FREQUENCY@cpan.org $
+ * $Id: standard.h 7082 2009-05-14 12:56:12Z FREQUENCY@cpan.org $
  */
 
 #ifndef STANDARD
@@ -17,6 +17,10 @@
 typedef  unsigned int  ub4;
 #else
 typedef  unsigned long  ub4;
+#endif
+
+#ifndef UINT32_MAX
+#define UINT32_MAX (4294967295U)
 #endif
 
 /* Some miscellaneous bit operation macros */
