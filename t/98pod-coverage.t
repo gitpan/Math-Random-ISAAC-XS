@@ -1,38 +1,32 @@
 #!/usr/bin/perl -T
 
-# t/01pod.t
-#  Checks that POD commands are correct
+# t/98pod-coverage.t
+#  Ensures all subroutines are documented with POD
 #
-# $Id: 01pod.t 8220 2009-07-25 23:18:15Z FREQUENCY@cpan.org $
+# $Id: 98pod-coverage.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
 use Test::More;
 
-unless ($ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING}) {
+unless ($ENV{RELEASE_TESTING}) {
   plan skip_all => 'Author tests not required for installation';
 }
 
 my %MODULES = (
-  'Test::Pod'     => 1.26,
-  'Pod::Simple'   => 3.07,
+  'Test::Pod::Coverage' => 1.04,
 );
 
 # Module::CPANTS::Kwalitee won't detect that we're using test modules as
 # author tests, so we convince it that we're loading it in the normal way.
-0 and require Test::Pod;
+0 and require Test::Pod::Coverage;
 
 while (my ($module, $version) = each %MODULES) {
   eval "use $module $version";
-  next unless $@;
-
-  if ($ENV{RELEASE_TESTING}) {
+  if ($@) {
     die 'Could not load release-testing module ' . $module;
-  }
-  else {
-    plan skip_all => $module . ' not available for testing';
   }
 }
 
-all_pod_files_ok();
+all_pod_coverage_ok();

@@ -6,11 +6,11 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  *
- * $Id: standard.h 7082 2009-05-14 12:56:12Z FREQUENCY@cpan.org $
+ * $Id: standard.h 8274 2009-07-28 17:00:35Z FREQUENCY@cpan.org $
  */
 
-#ifndef STANDARD
-#define STANDARD 1
+#ifndef STANDARD_H
+#define STANDARD_H 1
 
 /* Determine what type to use based on Perl's detection */
 #ifdef USE_INT
@@ -50,4 +50,4 @@ typedef  unsigned long  ub4;
 #define FALSE 0
 #endif /* FALSE */
 
-#endif /* STANDARD */
+#endif /* STANDARD_H */

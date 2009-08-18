@@ -4,11 +4,11 @@
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
  * 
- * $Id: rand.h 6953 2009-05-08 01:39:23Z FREQUENCY@cpan.org $
+ * $Id: rand.h 8274 2009-07-28 17:00:35Z FREQUENCY@cpan.org $
  */
 
-#ifndef RAND
-#define RAND 1
+#ifndef RAND_H
+#define RAND_H 1
 
 #include "standard.h"
 
@@ -39,4 +39,4 @@ ub4 randInt(randctx *);
     (r)->randrsl[(r)->randcnt])
  */
 
-#endif /* RAND */
+#endif /* RAND_H */

@@ -3,7 +3,7 @@
 # t/03uniform.t
 #  Checks that the generated sequence is a uniform distribution
 #
-# $Id: 03uniform.t 8221 2009-07-25 23:25:30Z FREQUENCY@cpan.org $
+# $Id: 04uniform.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
