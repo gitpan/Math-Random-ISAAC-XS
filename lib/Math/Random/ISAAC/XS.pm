@@ -1,7 +1,5 @@
 # Math::Random::ISAAC::XS
 #  Interface to the ISAAC Pseudo-Random Number Generator
-#
-# $Id: XS.pm 8617 2009-08-18 03:46:38Z FREQUENCY@cpan.org $
 
 package Math::Random::ISAAC::XS;
 
@@ -14,11 +12,11 @@ Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
 
 =head1 VERSION
 
-Version 1.001 ($Id: XS.pm 8617 2009-08-18 03:46:38Z FREQUENCY@cpan.org $)
+Version 1.002
 
 =cut
 
-our $VERSION = '1.001';
+our $VERSION = '1.002';
 $VERSION = eval $VERSION;
 
 =head1 SYNOPSIS
@@ -59,15 +57,21 @@ See L<Math::Random::ISAAC> for the full description.
 
 =head1 METHODS
 
-=head2 Math::Random::ISAAC::XS->new( @seeds )
+=head2 new
+
+  Math::Random::ISAAC::XS->new( @seeds )
 
 Implements the interface as specified in C<Math::Random::ISAAC>
 
-=head2 $rng->rand()
+=head2 rand
+
+  $rng->rand()
 
 Implements the interface as specified in C<Math::Random::ISAAC>
 
-=head2 $rng->irand()
+=head2 irand
+
+  $rng->irand()
 
 Implements the interface as specified in C<Math::Random::ISAAC>
 
@@ -81,7 +85,7 @@ XSLoader::load(__PACKAGE__, $VERSION);
 
 =head1 AUTHOR
 
-Jonathan Yu E<lt>frequency@cpan.orgE<gt>
+Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
 
 =head1 SUPPORT
 

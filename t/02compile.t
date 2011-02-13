@@ -2,8 +2,6 @@
 
 # t/02compile.t
 #  Check that the module can be compiled and loaded properly.
-#
-# $Id: 02compile.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

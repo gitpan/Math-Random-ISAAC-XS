@@ -1,8 +1,6 @@
-$Id: README 8618 2009-08-18 04:33:24Z FREQUENCY@cpan.org $
-
 Math::Random::ISAAC::XS is a C implementation of the ISAAC PRNG Algorithm
 
-Copyright 2009 by Jonathan Yu <frequency@cpan.org>. All rights reserved.
+Copyright 2011 by Jonathan Yu <jawnsy@cpan.org>. All rights reserved.
 
 INSTALLATION
 

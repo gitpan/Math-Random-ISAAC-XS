@@ -2,8 +2,6 @@
 
 # t/02sequence.t
 #  Checks that the generated sequence matches the reference
-#
-# $Id: 03sequence.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

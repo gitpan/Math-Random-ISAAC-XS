@@ -2,8 +2,6 @@
 
 # Build.PL
 #  Script to build and install this distribution
-#
-# $Id: Build.PL 8636 2009-08-18 16:29:02Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -52,9 +50,6 @@ my $builder = Module::Build->new(
   recursive_test_files  => 1,
   sign                  => 1,
   create_packlist       => 1,
-
-  # Maintain compatibility with ExtUtils::MakeMaker installations
-  create_makefile_pl    => 'passthrough',
 
   # Location of our special C and XS source files
   c_source => 'src',

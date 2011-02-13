@@ -2,8 +2,6 @@
 
 # t/01manifest.t
 #  Ensures MANIFEST file is up-to-date
-#
-# $Id: 01manifest.t 8220 2009-07-25 23:18:15Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

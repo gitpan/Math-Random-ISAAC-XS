@@ -2,8 +2,6 @@
 
 # t/01meta.t
 #  Tests that the META.yml meets the specification
-#
-# $Id: 99meta.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

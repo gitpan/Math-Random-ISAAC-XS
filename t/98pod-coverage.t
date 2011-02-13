@@ -2,8 +2,6 @@
 
 # t/98pod-coverage.t
 #  Ensures all subroutines are documented with POD
-#
-# $Id: 98pod-coverage.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

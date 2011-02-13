@@ -2,8 +2,6 @@
 
 # t/03uniform.t
 #  Checks that the generated sequence is a uniform distribution
-#
-# $Id: 04uniform.t 8278 2009-07-29 03:00:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

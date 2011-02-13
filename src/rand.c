@@ -10,14 +10,12 @@
  *  980324: make a portable version
  *  010626: Note this is public domain
  *
- * Jonathan Yu <frequency@cpan.org> made some mostly cosmetic changes and
+ * Jonathan Yu <jawnsy@cpan.org> made some mostly cosmetic changes and
  * prepared the file for life as a CPAN XS module.
  *
  * This package and its contents are released by the author into the
  * Public Domain, to the full extent permissible by law. For additional
  * information, please see the included `LICENSE' file.
- *
- * $Id: rand.c 6953 2009-05-08 01:39:23Z FREQUENCY@cpan.org $
  */
 
 #include "standard.h"
