@@ -1,23 +1,30 @@
-# Math::Random::ISAAC::XS
-#  Interface to the ISAAC Pseudo-Random Number Generator
-
 package Math::Random::ISAAC::XS;
+BEGIN {
+  $Math::Random::ISAAC::XS::VERSION = '1.003';
+}
+# ABSTRACT: C implementation of the ISAAC PRNG algorithm
 
 use strict;
 use warnings;
 
+
+# This is the code that actually bootstraps the module and exposes
+# the interface for the user. XSLoader is believed to be more
+# memory efficient than DynaLoader.
+use XSLoader;
+XSLoader::load(__PACKAGE__, $Math::Random::ISAAC::XS::VERSION);
+
+
+__END__
+=pod
+
 =head1 NAME
 
-Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG Algorithm
+Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG algorithm
 
 =head1 VERSION
 
-Version 1.002
-
-=cut
-
-our $VERSION = '1.002';
-$VERSION = eval $VERSION;
+version 1.003
 
 =head1 SYNOPSIS
 
@@ -75,86 +82,35 @@ Implements the interface as specified in C<Math::Random::ISAAC>
 
 Implements the interface as specified in C<Math::Random::ISAAC>
 
-=cut
-
-# This is the code that actually bootstraps the module and exposes
-# the interface for the user. XSLoader is believed to be more
-# memory efficient than DynaLoader.
-use XSLoader;
-XSLoader::load(__PACKAGE__, $VERSION);
-
-=head1 AUTHOR
-
-Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Math::Random::ISAAC::XS
-
-You can also look for information at:
-
-=over
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Math-Random-ISAAC-XS>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Math-Random-ISAAC-XS>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Math-Random-ISAAC-XS>
-
-=item * CPAN Request Tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS>
-
-=item * CPAN Testing Service (Kwalitee Tests)
-
-L<http://cpants.perl.org/dist/overview/Math-Random-ISAAC-XS>
-
-=item * CPAN Testers Platform Compatibility Matrix
-
-L<http://www.cpantesters.org/show/Math-Random-ISAAC-XS.html>
-
-=back
-
-=head1 REPOSITORY
-
-You can access the most recent development version of this module at:
-
-L<http://svn.ali.as/cpan/trunk/Math-Random-ISAAC-XS>
-
-If you are a CPAN developer and would like to make modifications to the
-code base, please contact Adam Kennedy E<lt>adamk@cpan.orgE<gt>, the
-repository administrator. I only ask that you contact me first to discuss
-the changes you wish to make to the distribution.
-
-=head1 FEEDBACK
-
-Please send relevant comments, rotten tomatoes and suggestions directly to
-the maintainer noted above.
-
-If you have a bug report or feature request, please file them on the CPAN
-Request Tracker at L<http://rt.cpan.org>. If you are able to submit your
-bug report in the form of failing unit tests, you are B<strongly> encouraged
-to do so.
-
 =head1 SEE ALSO
 
 L<Math::Random::ISAAC>
 
-=head1 LICENSE
+1;
 
-In a perfect world, I could just say that this package and all of the code
-it contains is Public Domain. It's a bit more complicated than that; you'll
-have to read the included F<LICENSE> file to get the full details.
+=head1 BUGS
 
-=head1 DISCLAIMER OF WARRANTY
+Please report any bugs or feature requests on the bugtracker website
+http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
+=head1 AUTHOR
+
+Jonathan Yu <jawnsy@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+Legally speaking, this package and its contents are:
+
+  Copyright (c) 2011 by Jonathan Yu <jawnsy@cpan.org>.
+
+But this is really just a legal technicality that allows the author to
+offer this package under the public domain and also a variety of licensing
+options. For all intents and purposes, this is public domain software,
+which means you can do whatever you want with it.
 
 The software is provided "AS IS", without warranty of any kind, express or
 implied, including but not limited to the warranties of merchantability,
@@ -166,4 +122,3 @@ the software.
 
 =cut
 
-1;

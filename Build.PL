@@ -43,7 +43,6 @@ else {
 my $builder = Module::Build->new(
   module_name           => 'Math::Random::ISAAC::XS',
   license               => 'unrestricted',
-  dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Math/Random/ISAAC/XS.pm',
   dynamic_config        => 1,
   create_readme         => 0,
@@ -59,41 +58,24 @@ my $builder = Module::Build->new(
 
   extra_compiler_flags => \@flags,
 
-  requires => {
-    'perl'                  => 5.006,
-
-    # The tests are based on Test::More
-    'Test::More'            => 0.62,
+  # Prerequisites generated from dist.ini by ModuleBuild::Custom
+  'build_requires' => {
+    'ExtUtils::CBuilder' => '0',
+    'ExtUtils::ParseXS' => '0',
+    'Module::Build' => '0.3601',
+    'Test::NoWarnings' => '0.084'
   },
-  build_requires => {
-    # User tests for good functionality
-    'Test::NoWarnings'      => 0.084,
-
-    # For the XS build process
-    'ExtUtils::CBuilder'    => 0,
-    'ExtUtils::ParseXS'     => 0,
+  'configure_requires' => {
+    'Module::Build' => '0.3601'
   },
-  recommends => {
-    # The main interface
-    'Math::Random::ISAAC'   => 0,
-  },
-  conflicts => {
+  'requires' => {
+    'Math::Random::ISAAC' => '0',
+    'Test::More' => '0.62',
+    'perl' => '5.006'
   },
 
   add_to_cleanup => [ 'Math-Random-ISAAC-XS-*' ],
   script_files => [],
-
-  meta_merge => {
-    resources => {
-      # Custom resources (must begin with an uppercase letter)
-      Ratings      => 'http://cpanratings.perl.org/d/Math-Random-ISAAC-XS',
-
-      # Official keys (homepage, license, bugtracker)
-      repository   => 'http://svn.ali.as/cpan/trunk/Math-Random-ISAAC-XS',
-      bugtracker   => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS',
-      license      => 'http://edwardsamuels.com/copyright/beyond/articles/public.html',
-    },
-  },
 );
 
 $builder->create_build_script();

@@ -1,32 +1,27 @@
 ---
-abstract: 'C implementation of the ISAAC PRNG Algorithm'
+abstract: 'C implementation of the ISAAC PRNG algorithm'
 author:
-  - 'Jonathan Yu <frequency@cpan.org>'
+  - 'Jonathan Yu <jawnsy@cpan.org>'
 build_requires:
   ExtUtils::CBuilder: 0
   ExtUtils::ParseXS: 0
+  Module::Build: 0.3601
   Test::NoWarnings: 0.084
 configure_requires:
-  Module::Build: 0.36
-dynamic_config: 1
-generated_by: 'Module::Build version 0.3607'
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.102400'
 license: unrestricted
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Math-Random-ISAAC-XS
-provides:
-  Math::Random::ISAAC::XS:
-    file: lib/Math/Random/ISAAC/XS.pm
-    version: 1.002
-recommends:
-  Math::Random::ISAAC: 0
 requires:
+  Math::Random::ISAAC: 0
   Test::More: 0.62
   perl: 5.006
 resources:
-  Ratings: http://cpanratings.perl.org/d/Math-Random-ISAAC-XS
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Math-Random-ISAAC-XS
-  license: http://edwardsamuels.com/copyright/beyond/articles/public.html
-  repository: http://svn.ali.as/cpan/trunk/Math-Random-ISAAC-XS
-version: 1.002
+  homepage: http://search.cpan.org/dist/Math-Random-ISAAC-XS
+  repository: git://github.com/jawnsy/Math-Random-ISAAC-XS.git
+version: 1.003
