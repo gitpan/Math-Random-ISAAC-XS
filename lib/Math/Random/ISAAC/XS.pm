@@ -1,6 +1,6 @@
 package Math::Random::ISAAC::XS;
 BEGIN {
-  $Math::Random::ISAAC::XS::VERSION = '1.003';
+  $Math::Random::ISAAC::XS::VERSION = '1.004';
 }
 # ABSTRACT: C implementation of the ISAAC PRNG algorithm
 
@@ -24,7 +24,7 @@ Math::Random::ISAAC::XS - C implementation of the ISAAC PRNG algorithm
 
 =head1 VERSION
 
-version 1.003
+version 1.004
 
 =head1 SYNOPSIS
 

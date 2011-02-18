@@ -45,10 +45,6 @@ my $builder = Module::Build->new(
   license               => 'unrestricted',
   dist_version_from     => 'lib/Math/Random/ISAAC/XS.pm',
   dynamic_config        => 1,
-  create_readme         => 0,
-  recursive_test_files  => 1,
-  sign                  => 1,
-  create_packlist       => 1,
 
   # Location of our special C and XS source files
   c_source => 'src',
@@ -62,20 +58,21 @@ my $builder = Module::Build->new(
   'build_requires' => {
     'ExtUtils::CBuilder' => '0',
     'ExtUtils::ParseXS' => '0',
-    'Module::Build' => '0.3601',
+    'Module::Build' => '0.2808_01',
+    'Test::More' => '0.62',
     'Test::NoWarnings' => '0.084'
   },
   'configure_requires' => {
-    'Module::Build' => '0.3601'
+    'Module::Build' => '0.2808_01'
+  },
+  'recommends' => {
+    'Math::Random::ISAAC' => '0'
   },
   'requires' => {
-    'Math::Random::ISAAC' => '0',
-    'Test::More' => '0.62',
     'perl' => '5.006'
   },
 
   add_to_cleanup => [ 'Math-Random-ISAAC-XS-*' ],
-  script_files => [],
 );
 
 $builder->create_build_script();
